@@ -524,6 +524,7 @@ address {
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  cursor: pointer;
   border-radius: 4px;
   background: #2f303a;
   padding-left: 16px;
@@ -531,6 +532,8 @@ address {
   line-height: 1.25;
   align-items: center;
   letter-spacing: 0.03em;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   color: rgba(255, 255, 255, 0.6);
 }
@@ -550,6 +553,8 @@ address {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   color: var(--primary-color-white);
 }
@@ -607,9 +612,7 @@ address {
   position: relative;
   overflow: hidden;
 }
-/* .gallery-card-thumb:hover::before {
-  opacity: ;
-} */
+
 .gallery-text {
   position: absolute;
   font-size: 18px;
@@ -668,9 +671,7 @@ address {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-
   opacity: 1;
-
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1;
@@ -703,12 +704,9 @@ address {
   transform: translate(-50%, -50%) scale(0.5);
 }
 .modal-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  margin-top: 8px;
-  margin-right: 8px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
   padding: 0;
   border-color: none;
   border-radius: 50%;
@@ -719,10 +717,22 @@ address {
   background: var(--primary-color-white);
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-button svg {
+  display: flex;
+  margin: auto;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-button svg:hover,
+.modal-button svg:focus {
+  fill: var(--accent-color);
+}
+
 .modal-form {
   padding: 40px;
-  padding-top: 0;
 }
 .modal-title {
   font-weight: bold;
@@ -737,23 +747,22 @@ address {
   cursor: pointer;
   width: 100%;
   height: 40px;
-  padding-left: 30px;
+  padding-left: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
   margin-bottom: 10px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
 }
 .form-field input:hover,
 .form-field input:focus {
   border: 1px solid var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .comments:hover,
 .comments:focus {
   border: 1px solid var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .label {
   font-size: 12px;
@@ -764,6 +773,17 @@ address {
 .form-field {
   position: relative;
 }
+.form-field input + .form-svg,
+.form-field input + .form-svg {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field input:hover + .form-svg,
+.form-field input:focus + .form-svg {
+  fill: var(--accent-color);
+}
+
 .form-svg {
   position: absolute;
   left: 0;
@@ -774,13 +794,14 @@ address {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
+
   margin-bottom: 20px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  outline: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .comments::placeholder {
   font-size: 12px;
