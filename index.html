@@ -405,20 +405,20 @@
       </section>
     </footer>
     <!-- modal -->
-    <div class="backdrop is-hidden" data-backdrop>
+    <div class="backdrop is-hidden " data-backdrop>
       <div class="modal">
         <button class="modal-button" data-close-modal>
           <svg width="18" height="18">
             <use href="./images/svg/icons.svg#icon-close-black"></use>
           </svg>
         </button>
-        <form action="#" class="modal-form js-speaker-form"  >
+        <form action="#" class="modal-form js-speaker-form">
 
             <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
 
-            <div class="form-field js-speaker-form">
+            <div class="form-field">
                 <label for="user-name" class="label">Имя</label>
-                <input type="text" class="form-name" id="user-name" required autofocus>
+                <input type="text" class="form-name" id="user-name" name="user-name" required autofocus>
                 <svg class="form-svg" width="18" height="18">
                     <use href="./images/svg/icons.svg#icon-person-black"></use>
                 </svg>
@@ -426,7 +426,7 @@
 
             <div class="form-field">
                 <label for="user-tel" class="label">Телефон</label>
-                <input  type="tel" class="form-tel" id="user-tel" required>
+                <input  type="tel" class="form-tel" id="user-tel" name="user-tel" required>
                 <svg class="form-svg" width="18" height="18">
                     <use href="./images/svg/icons.svg#icon-phone-black"></use>
                 </svg>
@@ -434,7 +434,7 @@
 
             <div class="form-field">
                 <label for="user-mail" class="label">Почта</label>
-                <input  type="email" class="form-mail" id="user-mail">
+                <input  type="email" class="form-mail" name="user-mail" id="user-mail">
                 <svg class="form-svg" width="18" height="18">
                     <use href="./images/svg/icons.svg#icon-email-black"></use>
                 </svg>
@@ -460,7 +460,8 @@
     </div>
       </div>
     </div>
-    <script src="./js/modal.js"></script>
+    <script src="./js/modal.js">
+    </script>
     <script>
 
     </script>

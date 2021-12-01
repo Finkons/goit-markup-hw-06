@@ -7,20 +7,6 @@ const refs = {
     
     refs.openModalBtn.addEventListener("click", toggleModal);
     refs.closeModalBtn.addEventListener("click", toggleModal);
-    refs.backdrop.addEventListener("click", logBackdropClick);
     function toggleModal() {
         refs.backdrop.classList.toggle("is-hidden");
     }
-        (() => {
-        document
-        .querySelector('.js-speaker-form')
-        .addEventListener('submit', e => {
-            e.preventDefault();
-
-            new FormData(e.currentTarget).forEach((value, name) =>
-            console.log(`${name}: ${value}`),
-            );
-
-            e.currentTarget.reset();
-        });
-    })();
